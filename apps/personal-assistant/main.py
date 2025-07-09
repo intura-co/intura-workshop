@@ -3,7 +3,7 @@ load_dotenv()
 
 
 from fastapi import FastAPI, HTTPException, Depends, Header
-from ai import create_retriever, predict
+from ai import predict
 
 
 
@@ -20,7 +20,6 @@ async def verify_api_key(x_api_key: str = Header(None)):
         raise HTTPException(status_code=401, detail="API key required")
     return x_api_key
 
-retriever = create_retriever("data/katalog_tempe.pdf")
 # Routes
 @app.get("/")
 async def root():
@@ -37,7 +36,7 @@ async def chat_with_gemini(
     
     try:
         # Generate response using Google Gemini
-        response = predict(retriever=retriever, query=message)
+        response = predict(query=message)
         
         return {"response": response}
     except Exception as e:

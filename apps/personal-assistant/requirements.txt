@@ -7,3 +7,4 @@ langchain-chroma==0.2.4
 langchain==0.3.26
 langchain-core==0.3.68
 langchain-community
+upstash-vector==0.8.0
