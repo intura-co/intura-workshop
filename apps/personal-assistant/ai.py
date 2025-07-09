@@ -1,15 +1,11 @@
-from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGenerativeAI
-from langchain.prompts import ChatPromptTemplate
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.schema import SystemMessage, HumanMessage
 
 # Configure Google Gemini
 model = ChatGoogleGenerativeAI(
         model="gemini-1.5-flash",
     )
-embedding_model = GoogleGenerativeAIEmbeddings(
-    model="models/embedding-001",
-)
-    
+
 # def create_retriever(pdf_path):
 #     loader = PyPDFLoader(pdf_path)  # Replace with your document path
 #     documents = loader.load()

@@ -2,9 +2,4 @@ fastapi==0.115.6
 uvicorn==0.35.0
 langchain-google-genai== 2.0.7
 python-dotenv==1.1.1
-pypdf==5.7.0
-langchain-chroma==0.2.4
 langchain==0.3.26
-langchain-core==0.3.68
-langchain-community
-upstash-vector==0.8.0
