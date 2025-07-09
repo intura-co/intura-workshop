@@ -20,7 +20,6 @@ async def verify_api_key(x_api_key: str = Header(None)):
         raise HTTPException(status_code=401, detail="API key required")
     return x_api_key
 
-
 retriever = create_retriever("data/katalog_tempe.pdf")
 # Routes
 @app.get("/")
